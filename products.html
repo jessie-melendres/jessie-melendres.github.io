@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapCook Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+ 
+</head> 
+<body>
+  <header>
+  
+    <div class="bars">
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-button">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+  
+      <label id="overlay" for="sidebar-active"></label>
+  
+      <div class="logo"><span><img src="images/CapcookLogo.png" alt="Logo"></span></div>
+  
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <i class="fa solid fa-x"></i>
+        </label>
+  
+        <a href="index.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="products.html" class="active"><i class="fa-solid fa-store"></i><span>Products</span> </a>
+        <a href="services.html"><i class="fa-solid fa-clone"></i><span>Services</span></a>
+        <a href="about.html"><i class="fa-solid fa-users"></i><span>About</span></a>
+        <a href="contact.html"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
+        <a href="login.html"><i class="fa-solid fa-user"></i><span>Login</span></a>
+        <a href="signup.html"><i class="fa-solid fa-right-to-bracket"></i><span>SignUp</span></a>
+        </ul>
+  
+      </div>
+      <details class="home-list">
+        <summary class="summary-sections">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </summary>
+        <ul>
+          <li><a href="#desserts">Section 1</a></li>
+          <li><a href="#foods">Section 2</a></li>
+          <li><a href="#beverage">Section 3</a></li>
+          <li><a href="#product_section4">Section 4</a></li>
+        </ul>
+      </details>
+    </div>
+  
+  </header>
+  <script type="text/javascript" src="js/script.js"></script>
+<main>
+  
+    <section class="product-section1" id="desserts">
+      <div class="title">
+        <h1>DESSERTS</h1>
+      </div>
+      <div class="dessert-section">
+        <div class="product" id="des-product-1">
+            <div class="photo">
+              <a href="#des-1"><img src="images/dessert3.jpg" alt="Product 1"></a>
+            </div>
+            <h2>Sweet CupCake</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="des-1">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-1" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/dessert3.jpg" alt="dessert-1">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Sweet CupCake</h2>
+                <div class="product-description"><p>A sweet cupcake is a small, individual-sized cake typically topped with rich, creamy frosting and decorated with colorful sprinkles or other edible decorations, offering a delightful and indulgent treat for the senses.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$6.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Sweet CupCake', 6)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Sweet CupCake', 6)">Buy</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product" id="des-product-2">
+            <div class="photo">
+              <a href="#des-2"><img src="images/dessert5.jpg" alt="Product 2"></a>
+            </div>
+            <h2>Banoffee Dessert Cake</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="des-2">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-2" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/dessert5.jpg" alt="dessert-2">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Banoffee Dessert Cake</h2>
+                <div class="product-description"><p>A banoffee dessert cake is a rich and decadent sweet treat that typically consists of a moist banana cake topped with a layer of caramelized bananas, creamy toffee, and a sprinkle of sea salt, all on a crunchy biscuit or cookie crust.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$10.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Banoffee Dessert Cake', 10)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Banoffee Dessert Cake', 10)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="des-product-3">
+            <div class="photo">
+              <a href="#des-3"><img src="images/dessert6.jpg" alt="Product 3"></a>
+            </div>
+            <h2>Ice Cream Sandwich Cake</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div> 
+
+        <div class="drinks-modal" id="des-3">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-3" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/dessert6.jpg" alt="dessert-3">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Ice Cream Sandwich Cake</h2>
+                <div class="product-description"><p>An Ice Cream Sandwich Cake is a creative and playful dessert that consists of layers of ice cream sandwiched between cookies, wafers, or cake, frozen together to form a towering cake-like structure, often decorated with whipped cream, chocolate sauce, and other toppings.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$8.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Ice Cream Sandwich Cake', 8)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Ice Cream Sandwich Cake', 8)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="des-product-4">
+            <div class="photo">
+              <a href="#des-4"><img src="images/image2.jpg" alt="Product 4"></a>
+            </div>
+            <h2>Lemon Panna Cotta</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="des-4">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-4" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image2.jpg" alt="dessert-4">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Lemon Panna Cotta</h2>
+                <div class="product-description"><p>Lemon panna cotta with vodka blueberry syrup is a creamy dessert made from a mixture of cream, milk, sugar, and gelatin, flavored with lemon, and served with a sweet and tangy blueberry syrup infused with vodka, creating a refreshing and indulgent treat.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$12.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Lemon Panna Cotta', 12)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Lemon Panna Cotta', 12)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="des-product-5">
+            <div class="photo">
+              <a href="#des-5"><img src="images/image7.jpg" alt="Product 5"></a>
+            </div>
+            <h2>Cupcake Brownie Sliders</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="des-5">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-5" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image7.jpg" alt="dessert-6">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Cupcake Brownie Sliders</h2>
+                <div class="product-description"><p>Cupcake Brownie Sliders are bite-sized desserts that combine a rich brownie base with cupcake-inspired toppings, such as frosting and sprinkles, presented in a convenient slider-style format.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$10.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Cupcake Brownie Sliders', 10)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Cupcake Brownie Sliders', 10)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="des-product-6">
+          <div class="photo">
+            <a href="#des-6"><img src="images/image8.jpg" alt="Product 1"></a>
+          </div>
+          <h2>Nutella Burger</h2>
+          <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="des-6">
+          <div class="DM-content">
+            <div class="submit"><a href="#des-product-6" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image8.jpg" alt="dessert-6">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Nutella Burger</h2>
+                <div class="product-description"><p>A Nutella Burger is a creative dessert that features a "patty" made of Nutella sandwiched between two cookies or wafers, often topped with whipped cream, fruit, or other sweet treats to resemble a mini burger.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$14.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Nutella Burger', 14)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Nutella Burger', 14)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    </section>
+    <section class="product-section2" id="foods">
+      <div class="title">
+        <h1>FOODS</h1>
+      </div>
+      <div class="foods-section">
+        <div class="product" id="food-product-1">
+            <div class="photo">
+              <a href="#foods-1"><img src="images/image9.jpg" alt="Product 1"></a>
+            </div>
+            <h2>Piri-piri chicken</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-1">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-1" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image9.jpg" alt="food-2">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Piri-piri chicken</h2>
+                <div class="product-description"><p>Serve up an easy one-pan traybake of piri-piri chicken of roasted chicken thighs, sweet potatoes, broccoli, and red onions.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$20.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Piri-piri chicken', 20)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Piri-piri chicken', 20)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="food-product-2">
+            <div class="photo">
+              <a href="#foods-2"><img src="images/image10.jpg" alt="Product 2"></a>
+            </div>
+            <h2>Fish Soup-Cook</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-2">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-2" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image10.jpg" alt="food-2">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Fish Soup-Cook</h2>
+                <div class="product-description"><p>A hearty fish soup packed with potatoes carrots and peppers and flavoured with leeks, dill and lemon.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$18.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Fish Soup-Cook', 18)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Fish Soup-Cook', 18)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="food-product-3">
+            <div class="photo">
+              <a href="#foods-3"><img src="images/image11.jpg" alt="Product 3"></a>
+            </div>
+            <h2>Broccoli Stem Falafel Bowl</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-3">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-3" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image11.jpg" alt="food-3">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Broccoli Stem Falafel Bowl</h2>
+                <div class="product-description"><p>Reduce food waste and make the falafel in this dish using an ingredient that's often discarded - broccoli stalks, which are blitzed into thr chickpea base.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$25.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Broccoli Stem Falafel Bowl', 25)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Broccoli Stem Falafel Bowl', 25)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="food-product-4">
+            <div class="photo">
+              <a href="#foods-4"><img src="images/image12.jpg" alt="Product 4"></a>
+            </div>
+            <h2>Potato, Leek & Chorizo Soup</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-4">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-4" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image12.jpg" alt="food-4">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Potato, Leek & Chorizo Soup</h2>
+                <div class="product-description"><p>Make this hearty soup on cold winter days. One of those holy grail recipes, it's both deeply flavoured and easy to make with a few seasonal ingredients.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$30.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Potato, Leek & Chorizo Soup', 30)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Potato, Leek & Chorizo Soup', 30)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="food-product-5">
+            <div class="photo">
+              <a href="#foods-5"><img src="images/image13.jpg" alt="Product 5"></a>
+            </div>
+            <h2>Pan-grilled Liempo</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-5">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-5" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image13.jpg" alt="food-5">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Pan-grilled Liempo</h2>
+                <div class="product-description"><p>Pan-grilled Liempo is a popular Filipino dish made by grilling or pan-frying a slab of pork belly (liempo) until crispy on the outside and tender on the inside, often served with liver sauce or vinegar and steamed rice.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$28.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Pan-grilled Liempo', 28)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Pan-grilled Liempo', 28)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="food-product-6">
+          <div class="photo">
+            <a href="#foods-6"><img src="images/image14.jpg" alt="Product 6"></a>
+          </div>
+          <h2>Bagnet Kari-Kari</h2>
+          <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="foods-6">
+          <div class="DM-content">
+            <div class="submit"><a href="#food-product-6" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/image14.jpg" alt="food-6">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Bagnet Kari-Kari</h2>
+                <div class="product-description"><p>Bagnet Kari-Kari is a popular Filipino dish that originated from the Ilocos region. It is a type of stew made with crispy fried pork belly (bagnet) and vegetables, cooked in a peanut-based sauce. The dish is often served with steamed rice.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$35.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Bagnet Kari-Kari', 35)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Bagnet Kari-Kari', 35)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    </section>
+
+    <section class="product-section3" id="beverage">
+      <div class="title">
+        <h1>DRINKS</h1>
+      </div>
+      <div class="drinks-section" id="drinks-product-1">
+        <div class="product">
+            <div class="photo">
+              <a href="#DM-1"><img src="images/beer.png" alt="Product 1"></a>
+            </div>
+            <h2>BEER</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="DM-1">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-1" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/beer.png" alt="drink-1">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">BEER</h2>
+                <div class="product-description"><p>Raise a glass to good times and great company with our refreshing craft beer – your perfect companion for every celebration!</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$5.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('BEER', 5)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('BEER', 5)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="drinks-product-2">
+            <div class="photo">
+              <a href="#DM-2"><img src="images/coke.png" alt="Product 2"></a>
+            </div>
+            <h2>COKE</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="DM-2">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-2" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/coke.png" alt="drink-5">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">COKE</h2>
+                <div class="product-description"><p>Refresh your day with the classic taste of Coca-Cola – the perfect companion for every moment!" "Unleash the joy of every sip with Coca-Cola – the ultimate refreshment for any occasion!</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$3.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('COKE', 3)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('COKE', 3)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="drinks-product-3">
+            <div class="photo">
+              <a href="#DM-3"><img src="images/heineken.jpg" alt="Product 3"></a>
+            </div>
+            <h2>Heineken</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="DM-3">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-3" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/heineken.jpg" alt="drink-3">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Heineken</h2>
+                <div class="product-description"><p>Experience the crisp, refreshing taste of Heineken – the perfect beer to elevate your moments and celebrate life!</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$10.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Heineken', 10)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Heineken', 10)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="drinks-product-4">
+            <div class="photo">
+              <a href="#DM-4"><img src="images/cocktail.jpg" alt="Product 4"></a>
+            </div>
+            <h2>Cocktail</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="DM-4">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-4" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/cocktail.jpg" alt="drink-4">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Cocktail</h2>
+                <div class="product-description"><p>Shake up your night with our vibrant cocktails, expertly crafted to tantalize your taste buds and elevate your spirits!</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$15.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Cocktail', 15)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Cocktail', 15)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="drinks-product-5">
+            <div class="photo">
+              <a href="#DM-5"><img src="images/Grenadine-diabolo.jpg" alt="Product 6"></a>
+            </div>
+            <h2>Diabolo Grenadine</h2>
+            <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+
+        <div class="drinks-modal" id="DM-5">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-5" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/Grenadine-diabolo.jpg" alt="drink-5">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Diabolo grenadine</h2>
+                <div class="product-description"><p>Diabolo grenadine is a refreshing non-alcoholic drink made by mixing lemonade with grenadine syrup, creating a sweet and fizzy beverage that's popular in France, especially among children.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$13.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Diabolo grenadine', 13)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Diabolo grenadine', 13)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" id="drinks-product-6">
+          <div class="photo">
+            <a href="#DM-6"><img src="images/tequila.jpg" alt="Product 6"></a>
+          </div>
+          <h2>Tequila Sunrise Cocktail</h2>
+          <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+        </div>
+        
+        <div class="drinks-modal" id="DM-6">
+          <div class="DM-content">
+            <div class="submit"><a href="#drinks-product-6" class="close">X</a></div>
+            <div class="modaldm">
+              <div class="DMphoto">
+                <img src="images/tequila.jpg" alt="drink-6">
+              </div>
+              <div class="modaldm-content">
+                <h2 class="title">Tequila Sunrise Cocktail</h2>
+                <div class="product-description"><p>A Tequila Sunrise is a classic cocktail known for its vibrant colors and refreshing taste. It typically consists of three main ingredients: tequila, orange juice, and grenadine.</p></div>
+                <p class="rating">⭐⭐⭐⭐⭐ 5.0/5.0</p>
+                <p class="price">$16.00</p>
+                <div class="p-button">
+                  <button class="add-to-cart" onclick="addToCart('Tequila Sunrise Cocktail', 16)">Add to Cart</button>
+                  <button class="buy-button" onclick="buyNow('Tequila Sunrise Cocktail', 16)">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    </section>
+
+    <button class="view_cart" id="view-cart" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+
+    <div id="cart-modal" class="modal">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart_items"></div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+    <script src="js/paploy.js"></script>
+</main>
+
+<section class="product_review" id="product_section4">
+        <div class="testimonial-head">
+          <h2>What Our Customers Say</h2>
+        </div>
+        
+        <div class="testimonials" id="testimonial-1">
+         <div class="customer-profile">
+           <a href="#profile-1"><img src="images/geraldprofile.jpg" alt="profile"></a>
+           <div class="profile-name">
+              <a href="#profile-1"><p class="name">Gerald G. Degamo</p></a>
+              <a href="#profile-1"><p class="email">geraldcook@gmail.com</p></a>
+           </div>
+           
+           <div class="lightbox" id="profile-1">
+            <div class="lightbox-content">
+              <div class="submit"><a href="#testimonial-1" class="close">X</a></div>
+              <div class="cover-1">
+                <a href="#prof"><img src="images/geraldprofile.jpg" /></a>
+              </div>
+              <hr>
+              <div class="profile-content">
+                <p class="name">Name: Gerald G. Degamo</p>
+                <p class="address">Address: Purok 7, Santo Niño, Talibon, Bohol</p>
+                <p class="sex">Sex: Male</p>
+                <p class="school">School: North Coast Bohol Institute Incorporated</p>
+              </div>
+            </div>
+           </div>
+           
+         </div>
+         <div class="testimonial-content">
+          <h2>A Delicious Obsession with CapCook!</h2>
+          <p>"I stumbled upon CapCook Restaurant and Bakery a year ago, and it's been a game-changer for my taste buds! Their innovative recipes, fresh ingredients, and warm hospitality have made me a loyal fan.</p>
+         </div>
+        </div>
+        
+        <div class="testimonials" id="testimonial-2">
+         <div class="customer-profile">
+           <a href="#profile-2"><img src="images/andreyprofile.jpg" alt="profile"></a>
+           <div class="profile-name">
+              <a href="#profile-2"><p class="name">Mark Andrey M. Calimot</p></a>
+              <a href="#profile-2"><p class="email">andreycalimot@gmail.com</p></a>
+           </div>
+           
+           <div class="lightbox" id="profile-2">
+            <div class="lightbox-content">
+              <div class="submit"><a href="#testimonial-2" class="close">X</a>
+              </div>
+              <div class="cover-2">
+                <a href="#"><img src="images/andreyprofile.jpg" /></a>
+              </div>
+              <hr>
+              <div class="profile-content">
+                <p class="name">Name: Mark Andrey M. Calimot</p>
+                <p class="address">Address: Purok 7, Santo Niño, Talibon, Bohol</p>
+                <p class="sex">Sex: Male</p>
+                <p class="school">School: North Coast Bohol Institute Incorporated</p>
+              </div>
+            </div>
+           </div>
+         </div>
+         <div class="testimonial-content">
+          <h2>A Taste of Excellence with CapCook!</h2>
+          <p>"I've been a loyal customer of CapCook Restaurant and Bakery for years, and I can't rave enough about their incredible products! From their mouthwatering meals to their decadent pastries, every bite is a culinary delight.</p>
+         </div>
+        </div>
+</section>
+
+  <section class="footer">
+        <p>Created by</p><h4>CapCook</h4><p> | 2024 All rights reserved</p>
+      </section>
+</body>
+
+</html>
