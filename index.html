@@ -119,9 +119,6 @@
   const swatter = document.getElementById('swatter');
   const jumpscare = document.getElementById('jumpscare');
 
-  const buzzSound = new Audio('audio/fly.mp3');
-  buzzSound.play();
-
   let posX = Math.random() * (window.innerWidth - 50);
   let posY = Math.random() * (window.innerHeight - 50);
   langaw.style.left = posX + 'px';
@@ -131,6 +128,9 @@
   let directionY = (Math.random() - 0.5) * 8;
 
   function buzzAround() {
+    const buzzSound = new Audio('audio/fly.mp3');
+    buzzSound.play();
+    
     directionX += (Math.random() - 0.5) * 1.2;
     directionY += (Math.random() - 0.5) * 1.2;
 
@@ -228,5 +228,6 @@
 
 
 </html>
+
 
 
