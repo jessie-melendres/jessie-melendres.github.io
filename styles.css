@@ -10,7 +10,6 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  touch-action: none;
 }
 
 h1,
@@ -117,4 +116,5 @@ footer {
   background: url('img/jumpscare.jpg') center/cover no-repeat;
   z-index: 9999;
 }
+
 
