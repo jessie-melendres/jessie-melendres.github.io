@@ -107,7 +107,6 @@
   <div id="langaw"></div>
   <img id="swatter" src="img/swatter.png" alt="Swatter">
   <div id="jumpscare"></div>
-  <audio id="buzzSound" src="audio/fly.mp3" preload="auto" loop></audio>
 </body>
 
 <script>
@@ -120,7 +119,7 @@
   const swatter = document.getElementById('swatter');
   const jumpscare = document.getElementById('jumpscare');
 
-  const buzzSound = document.getElementById("buzzSound");
+  const buzzSound = new Audio('audio/fly.mp3');
   buzzSound.play();
 
   let posX = Math.random() * (window.innerWidth - 50);
@@ -226,5 +225,6 @@
     if (posY > window.innerHeight - 50) posY = window.innerHeight - 60;
   }
 </script>
+
 
 </html>
