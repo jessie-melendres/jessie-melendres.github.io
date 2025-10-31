@@ -103,14 +103,34 @@
   <footer>
     <p>Made with ❤️ by Jessie Melendres</p>
   </footer>
+  
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome!</h2>
+      <p>We’re glad to have you here. Enjoy exploring my portfolio!</p>
+      <button id="okButton" class="ok-btn">OK</button>
+    </div>
+  </div>
 
+  
   <div id="langaw"></div>
   <img id="swatter" src="img/swatter.png" alt="Swatter">
   <div id="jumpscare"></div>
+  
 </body>
 
 <script>
-  alert("Welcome to my personal portfolio! Please feel free to provide comment and suggestions! :) \n PS. HAPAKA ANG LANGAW GAMIT ANG SWATTER PARA MA-ZOOM");
+  const modal = document.getElementById('welcomeModal');
+  const okButton = document.getElementById('okButton');
+  
+  window.onload = function () {
+    modal.style.display = 'block';
+  };
+  
+  okButton.onclick = function () {
+    modal.style.display = 'none';
+  };
+
   function onClick() {
     alert("Coming soon!");
   }
@@ -222,6 +242,7 @@
 
 
 </html>
+
 
 
 
