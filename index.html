@@ -115,7 +115,6 @@
   }
 </script>
 <script>
-  const langaw = document.getElementById('langaw');
   const swatter = document.getElementById('swatter');
   const jumpscare = document.getElementById('jumpscare');
 
@@ -126,11 +125,6 @@
 
   let directionX = (Math.random() - 0.5) * 8;
   let directionY = (Math.random() - 0.5) * 8;
-
-  function playBuzzSound(){
-    const buzzSound = new Audio('audio/fly.mp3');
-    buzzSound.play();
-  }
   
   function buzzAround() {
     directionX += (Math.random() - 0.5) * 1.2;
@@ -158,7 +152,6 @@
     }
   }
   buzzAround();
-  playBuzzSound();
 
   let isDragging = false;
   let offsetX, offsetY;
@@ -231,6 +224,7 @@
 
 
 </html>
+
 
 
 
