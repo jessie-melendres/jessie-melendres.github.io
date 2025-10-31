@@ -10,7 +10,6 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  touch-action: none;
 }
 
 h1,
@@ -43,12 +42,13 @@ header img {
 
 header button {
   color: #111111;
-  background-color: #ff0000;
+  background-color: #c9e1ff;
   width: 100px;
   border-radius: 5px;
   border: none;
   padding: 5px 10px;
   margin-top: 5px;
+  touch-action: none;
 }
 
 section {
@@ -118,6 +118,68 @@ footer {
   z-index: 9999;
 }
 
+#tooltip {
+  position: fixed;
+  bottom: 130px;
+  left: 100px;
+  background-color: #111;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeOut 2s ease-in 3s forwards; /* fade away after 3 seconds */
+  z-index: 20;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal box */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* OK Button */
+.ok-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ok-btn:hover {
+  background-color: #0056b3;
+}
 
 
-
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
