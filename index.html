@@ -160,21 +160,21 @@
   let isDragging = false;
   let offsetX, offsetY;
 
-  swatter.addEventListener('mousedown', (e) => {
+  swatter.addEventListener('pointerdown', (e) => {
     isDragging = true;
     offsetX = e.clientX - swatter.offsetLeft;
     offsetY = e.clientY - swatter.offsetTop;
     swatter.style.cursor = 'grabbing';
   });
 
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener('pointermove', (e) => {
     if (!isDragging) return;
     swatter.style.left = e.clientX - offsetX + 'px';
     swatter.style.top = e.clientY - offsetY + 'px';
     checkCollision();
   });
 
-  document.addEventListener('mouseup', () => {
+  document.addEventListener('pointerup', () => {
     isDragging = false;
     swatter.style.cursor = 'grab';
   });
@@ -228,3 +228,4 @@
 
 
 </html>
+
