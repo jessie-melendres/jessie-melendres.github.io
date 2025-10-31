@@ -42,7 +42,7 @@ header img {
 
 header button {
   color: #111111;
-  background-color: #c9e1ff;
+  background-color: #ff0000;
   width: 100px;
   border-radius: 5px;
   border: none;
@@ -116,5 +116,6 @@ footer {
   background: url('img/jumpscare.jpg') center/cover no-repeat;
   z-index: 9999;
 }
+
 
 
