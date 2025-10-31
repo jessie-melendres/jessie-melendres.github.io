@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessie Melendres - Software Engineer & IT Instructor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <div class="col col-1">
+        <img src="img/profile-pic.jpg" alt="profile picture">
+      </div>
+      <div class="col col-2">
+        <h1>Jessie Melendres</h1>
+        <p>Software Engineer | IT Instructor</p>
+        <button onclick="onClick()">Click Me!</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>Hi! I'm a front-end software engineer passionate about building clean, user-friendly web interfaces with
+        Angular and Ionic. I also teach part-time as a college IT instructor, sharing real-world insights and helping
+        students grow their skills in tech.</p>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="row">
+        <div class="col col-1">
+          <p>2023 - Present</p>
+        </div>
+        <div class="col col-2">
+          <p class="description">Software Engineer</p>
+          <p>Taguig City, PH</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-1">
+          <p>2024 - Present</p>
+        </div>
+        <div class="col col-2">
+          <p class="description">IT Instructor</p>
+          <p>Bohol, PH</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <div class="col col-1">
+          <p>2019 - 2023</p>
+        </div>
+        <div class="col col-2">
+          <p class="description">Bachelor of Science in Computer Science at Adamson University</p>
+          <p>Manila City, PH</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h2>Technologies</h2>
+      </div>
+
+      <div class="technologies">
+        <div class="pills">
+          <p class="description">Angular</p>
+        </div>
+        <div class="pills">
+          <p class="description">Ionic</p>
+        </div>
+        <div class="pills">
+          <p class="description">HTML</p>
+        </div>
+        <div class="pills">
+          <p class="description">CSS</p>
+        </div>
+        <div class="pills">
+          <p class="description">Javascript</p>
+        </div>
+        <div class="pills">
+          <p class="description">Laravel</p>
+        </div>
+        <div class="pills">
+          <p class="description">MS SQL</p>
+        </div>
+        <div class="pills">
+          <p class="description">SQLite</p>
+        </div>
+        <div class="pills">
+          <p class="description">MySQL</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Made with ❤️ by Jessie Melendres</p>
+  </footer>
+
+  <div id="langaw"></div>
+  <img id="swatter" src="img/swatter.png" alt="Swatter">
+  <div id="jumpscare"></div>
+  <audio id="buzzSound" src="audio/fly.mp3" preload="auto" loop></audio>
+</body>
+
+<script>
+  function onClick() {
+    alert("Coming soon!");
+  }
+</script>
+<script>
+  const langaw = document.getElementById('langaw');
+  const swatter = document.getElementById('swatter');
+  const jumpscare = document.getElementById('jumpscare');
+
+  const buzzSound = document.getElementById("buzzSound");
+  buzzSound.play();
+
+  let posX = Math.random() * (window.innerWidth - 50);
+  let posY = Math.random() * (window.innerHeight - 50);
+  langaw.style.left = posX + 'px';
+  langaw.style.top = posY + 'px';
+
+  let directionX = (Math.random() - 0.5) * 8;
+  let directionY = (Math.random() - 0.5) * 8;
+
+  function buzzAround() {
+    directionX += (Math.random() - 0.5) * 1.2;
+    directionY += (Math.random() - 0.5) * 1.2;
+
+    directionX = Math.max(-5, Math.min(5, directionX));
+    directionY = Math.max(-5, Math.min(5, directionY));
+
+    posX += directionX;
+    posY += directionY;
+
+    if (posX < 0 || posX > window.innerWidth - 50) directionX *= -1;
+    if (posY < 0 || posY > window.innerHeight - 50) directionY *= -1;
+
+    langaw.style.left = posX + 'px';
+    langaw.style.top = posY + 'px';
+
+    const angle = Math.atan2(directionY, directionX) * (180 / Math.PI);
+    langaw.style.transform = `rotate(${angle + 90}deg)`;
+
+    if (Math.random() < 0.008) {
+      setTimeout(() => requestAnimationFrame(buzzAround), 300);
+    } else {
+      requestAnimationFrame(buzzAround);
+    }
+  }
+  buzzAround();
+
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  swatter.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - swatter.offsetLeft;
+    offsetY = e.clientY - swatter.offsetTop;
+    swatter.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    swatter.style.left = e.clientX - offsetX + 'px';
+    swatter.style.top = e.clientY - offsetY + 'px';
+    checkCollision();
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    swatter.style.cursor = 'grab';
+  });
+
+  function checkCollision() {
+    const flyRect = langaw.getBoundingClientRect();
+    const swatRect = swatter.getBoundingClientRect();
+
+    const isHit = !(
+      swatRect.right < flyRect.left ||
+      swatRect.left > flyRect.right ||
+      swatRect.bottom < flyRect.top ||
+      swatRect.top > flyRect.bottom
+    );
+
+    if (isHit) swatLangaw();
+  }
+
+  function swatLangaw() {
+    buzzSound.pause();
+    buzzSound.currentTime = 0;
+
+    const slap = new Audio('audio/slap.mp3');
+    slap.play();
+
+    langaw.style.display = 'none';
+
+    slap.addEventListener('ended', () => {
+      const scream = new Audio('audio/ghost.mp3');
+      scream.currentTime = 0.5;
+      scream.play();
+      jumpscare.style.display = 'block';
+
+      setTimeout(() => {
+        jumpscare.style.display = 'none';
+        langaw.style.display = 'block';
+        posX = Math.random() * (window.innerWidth - 50);
+        posY = Math.random() * (window.innerHeight - 50);
+        moveBackOnScreen();
+      }, 3000);
+    });
+  }
+
+  function moveBackOnScreen() {
+    if (posX < 0) posX = 10;
+    if (posY < 0) posY = 10;
+    if (posX > window.innerWidth - 50) posX = window.innerWidth - 60;
+    if (posY > window.innerHeight - 50) posY = window.innerHeight - 60;
+  }
+</script>
+
+</html>

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-size: 1.125rem;
+  color: #111111;
+}
+
+p {
+  color: #555555;
+}
+
+header {
+  margin-top: 50px;
+}
+
+header .row {
+  display: flex;
+  align-items: center;
+}
+
+header .row .col-1 {
+  margin-right: 20px;
+}
+
+header img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+header button {
+  color: #111111;
+  background-color: #c9e1ff;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+section {
+  margin-top: 30px;
+}
+
+section .row {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+section .row .col {
+  margin-bottom: 20px;
+}
+
+section .row .col-1 {
+  margin-right: 80px;
+}
+
+.description {
+  color: #111111;
+}
+
+.technologies {
+  display: flex;
+}
+
+.pills {
+  background-color: #c9e1ff;
+  margin: 5px;
+  padding: 5px 10px;
+  width: auto;
+  border-radius: 15px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#langaw {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  background-image: url('img/fly.png');
+  background-size: cover;
+  transition: all 1s linear;
+  z-index: 1;
+}
+
+#swatter {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  cursor: grab;
+  user-select: none;
+  z-index: 2;
+}
+
+#jumpscare {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: url('img/jumpscare.jpg') center/cover no-repeat;
+  z-index: 9999;
+}
+
+@media (max-width: 360px) {
+  body {
+    padding: 10px;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  header .row,
+  section .row {
+    display: block;
+  }
+}
