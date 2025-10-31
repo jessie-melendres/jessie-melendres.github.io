@@ -10,6 +10,7 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  touch-action: none;
 }
 
 h1,
@@ -128,4 +129,5 @@ footer {
   section .row {
     display: block;
   }
+
 }
